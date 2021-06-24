@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Please enter a TSR"
+read TSR
+cp /home/$TSR/.config/google-chrome/Default/History .
+sqlite3 History "select * from urls" > $TSR"_history"
+rm History
