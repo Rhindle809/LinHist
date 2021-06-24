@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Please enter a TSR"
-read TSR
-cp /home/$TSR/.config/google-chrome/Default/History .
-sqlite3 History "select * from urls" > $TSR"_history"
+echo "Please enter a Username"
+read USER
+cp /home/$USER/.config/google-chrome/Default/History .
+sqlite3 History "select * from urls" > $USER"_history"
 rm History
